@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Shakti Prasad Muduli - Chief Information Security Officer at Accesco. Application and API security, cloud security, penetration testing, platform engineering and AI automation.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Shakti Prasad Muduli">
+<meta property="og:description" content="Shakti Prasad Muduli - Chief Information Security Officer at Accesco. Application and API security, cloud security, penetration testing, platform engineering and AI automation.">
+<meta property="og:image" content="assets/shakti.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/shakti.png">
+<title>Shakti Prasad Muduli</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+/* --- host skeleton reset (supplied by the Artifact platform; added here for static hosting) --- */
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+
+/* Layout: single measured column under a thin mono rule-line system — a security dossier,
+   where every heading is a numbered clause and every date is machine-readable. */
+:root{
+  --bg:#0B0E13;
+  --surface:#131922;
+  --surface-2:#19202B;
+  --line:#242D3B;
+  --fg:#E7EBF1;
+  --muted:#8C98AA;
+  --accent:#FFB020;
+  --accent-ink:#0B0E13;
+  --crimson:#B33A52;
+  --font-display:"IBM Plex Sans Condensed","Helvetica Neue",Arial,sans-serif;
+  --font-body:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#F4F2EE;
+    --surface:#FFFFFF;
+    --surface-2:#EBE8E2;
+    --line:#D6D1C8;
+    --fg:#15181E;
+    --muted:#5E6675;
+    --accent:#A8600A;
+    --accent-ink:#FFFFFF;
+    --crimson:#8E2437;
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#F4F2EE;
+  --surface:#FFFFFF;
+  --surface-2:#EBE8E2;
+  --line:#D6D1C8;
+  --fg:#15181E;
+  --muted:#5E6675;
+  --accent:#A8600A;
+  --accent-ink:#FFFFFF;
+  --crimson:#8E2437;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);
+  z-index:40;background:var(--bg);
+}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.05}
+p{margin:0}
+
+.wrap{
+  max-width:1120px;margin-inline:auto;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
+
+/* ---- top bar ---- */
+.topbar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:30;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.mark{
+  font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;white-space:nowrap;
+}
+.mark span{color:var(--accent)}
+.navlinks{display:flex;gap:18px;margin-left:auto;flex-wrap:wrap}
+.navlinks a{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;padding-block:4px;border-bottom:1px solid transparent;
+}
+.navlinks a:hover,.navlinks a:focus-visible{color:var(--fg);border-bottom-color:var(--accent)}
+.themebtn{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  background:none;border:1px solid var(--line);color:var(--muted);
+  border-radius:2px;padding:5px 9px;cursor:pointer;
+}
+.themebtn:hover{color:var(--fg);border-color:var(--accent)}
+
+/* ---- hero ---- */
+.hero .wrap{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:40px;align-items:end;padding-block:44px 0;
+}
+.eyebrow{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:22px;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+h1{
+  font-size:clamp(44px,9vw,92px);font-weight:700;letter-spacing:-.025em;text-transform:uppercase;
+}
+h1 em{font-style:normal;color:var(--accent);display:block}
+.lede{
+  margin-top:22px;max-width:52ch;font-size:clamp(16px,1.9vw,18.5px);color:var(--muted);
+}
+.lede b{color:var(--fg);font-weight:600}
+.facts{
+  margin-top:28px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.facts div{padding:14px 16px 14px 0;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts dt{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px;
+}
+.facts dd{margin:0;font-family:var(--font-display);font-size:17px;font-weight:600;letter-spacing:.01em}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 56px}
+.btn{
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;padding:11px 18px;border-radius:2px;border:1px solid var(--accent);
+  background:var(--accent);color:var(--accent-ink);font-weight:600;
+}
+.btn.ghost{background:none;color:var(--fg);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+
+.portrait{
+  position:relative;align-self:end;min-width:0;
+  display:flex;justify-content:center;align-items:flex-end;
+}
+.portrait img{
+  display:block;width:auto;max-width:100%;max-height:min(66vh,560px);
+  position:relative;z-index:2;
+}
+.portrait::before{
+  content:"";position:absolute;left:50%;bottom:4%;translate:-50% 0;
+  width:min(132%,460px);aspect-ratio:1;border-radius:50%;z-index:0;
+  background:radial-gradient(circle,color-mix(in srgb,var(--accent) 32%,transparent) 0%,transparent 68%);
+}
+.portrait::after{
+  content:"";position:absolute;left:50%;bottom:3%;translate:-50% 0;
+  width:min(104%,360px);aspect-ratio:1;border:1px solid var(--line);border-radius:50%;z-index:1;
+}
+
+/* ---- sections ---- */
+section{border-top:1px solid var(--line)}
+.sec-head{
+  display:flex;align-items:baseline;gap:16px;padding-block:44px 28px;flex-wrap:wrap;
+}
+.clause{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.16em;color:var(--accent);
+  border:1px solid var(--line);border-radius:2px;padding:3px 8px;
+}
+.sec-head h2{font-size:clamp(26px,4.4vw,40px);font-weight:700;letter-spacing:-.015em;text-transform:uppercase}
+.sec-head p{color:var(--muted);font-size:15px;max-width:46ch;margin-left:auto}
+
+.prose{padding-bottom:52px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px}
+.prose p{max-width:62ch;color:var(--muted);font-size:16.5px}
+.prose p + p{margin-top:16px}
+.prose strong{color:var(--fg);font-weight:600}
+
+/* focus cards */
+.focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);margin-bottom:52px}
+.card{background:var(--surface);padding:26px 24px;min-width:0}
+.card h3{font-size:19px;font-weight:600;letter-spacing:-.005em;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+.card ul{
+  list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px;
+}
+.card li{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;color:var(--muted);
+  border:1px solid var(--line);border-radius:2px;padding:3px 7px;
+}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0 0 52px}
+.row{
+  display:grid;grid-template-columns:168px minmax(0,1fr);gap:28px;
+  padding-block:26px;border-top:1px solid var(--line);
+}
+.tl .row:first-child{border-top:0}
+.when{font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;color:var(--muted);
+  font-variant-numeric:tabular-nums}
+.when b{display:block;color:var(--fg);font-weight:500}
+.now{color:var(--accent)}
+.role{min-width:0}
+.role h3{font-size:21px;font-weight:600;letter-spacing:-.01em}
+.org{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--accent);margin-top:6px}
+.role p{color:var(--muted);font-size:15.5px;max-width:62ch;margin-top:12px}
+.role p + p{margin-top:10px}
+.chip{
+  float:right;margin-left:14px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:2px;padding:3px 8px;
+}
+.chip.sec{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.chip.med{color:var(--crimson);border-color:color-mix(in srgb,var(--crimson) 45%,var(--line))}
+.chip.eng{color:var(--fg);border-color:color-mix(in srgb,var(--fg) 28%,var(--line))}
+
+/* toolkit */
+.kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:26px;padding-bottom:52px}
+.kit h3{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px;
+}
+.kit ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.kit li{font-size:14.5px;color:var(--fg)}
+.kit li::before{content:"·";color:var(--accent);margin-right:8px}
+
+/* contact */
+.contact{padding-block:48px 64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto);
+  gap:32px;align-items:end}
+.contact h2{font-size:clamp(28px,5vw,46px);font-weight:700;text-transform:uppercase;letter-spacing:-.02em}
+.contact p{color:var(--muted);margin-top:14px;max-width:44ch}
+footer{border-top:1px solid var(--line)}
+footer .wrap{
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:20px 34px;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:8px;padding-block:40px 0}
+  .portrait{max-width:420px;width:100%;margin-inline:auto;order:-1}
+  .cta{margin-bottom:44px}
+  .prose{grid-template-columns:1fr;gap:18px}
+  .focus{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:10px}
+  .sec-head p{margin-left:0}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .facts{grid-template-columns:1fr;border-top:1px solid var(--line)}
+  .facts div{border-right:0;border-bottom:1px solid var(--line);padding-right:0}
+  .facts div:last-child{border-bottom:0}
+  .chip{float:none;display:inline-block;margin:0 0 8px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <div class="mark">SPM<span>_</span>/ Security</div>
+    <nav class="navlinks">
+      <a href="#profile">Profile</a>
+      <a href="#focus">Focus</a>
+      <a href="#experience">Experience</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="themebtn" id="theme-toggle" type="button">Light</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Chief Information Security Officer</div>
+      <h1>Shakti Prasad<em>Muduli</em></h1>
+      <p class="lede">I build the platform and the defence around it — <b>application, API and cloud security</b> for a quick-commerce company, alongside the web engineering, AI features and automation that keep it running.</p>
+      <dl class="facts">
+        <div><dt>Current</dt><dd>CISO, Accesco</dd></div>
+        <div><dt>Practice</dt><dd>Security &amp; Platform</dd></div>
+        <div><dt>Base</dt><dd>Bengaluru, India</dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/in/shakti-prasad-muduli/">LinkedIn</a>
+        <a class="btn ghost" href="#experience">Read the record</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/shakti.png" alt="Shakti Prasad Muduli, standing with arms folded in a dark suit" width="496" height="1020">
+    </div>
+  </div>
+</div>
+
+<section id="profile">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="clause">01</span>
+      <h2>Profile</h2>
+      <p>Security that engineering teams can actually ship against.</p>
+    </div>
+    <div class="prose">
+      <div>
+        <p>I started on the offensive side — <strong>web, mobile and API penetration testing</strong> against OWASP methodology — and moved into leading the function. That order matters: I know what a finding looks like from both ends of the report, so the remediation I ask for is the one a developer can land this sprint.</p>
+        <p>Today I set cybersecurity strategy at <strong>Accesco</strong>, a quick-commerce company, covering application and API security, cloud security, vulnerability management and security operations.</p>
+      </div>
+      <div>
+        <p>I also build the thing I'm defending. At Accesco that has meant responsive, dynamic web pages on strong and secure databases, API integration, event handling and traffic distribution, plus <strong>AI/ML features, fine-tuning and automation with FastAPI and Flask</strong>.</p>
+        <p>The same pairing runs through <strong>TEDxNHCE</strong>, where I lead tech and the website, and <strong>QuantumX '26</strong>, where I built a high-traffic site with a voice-enabled chatbot and led the graphics team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="focus">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="clause">02</span>
+      <h2>Focus areas</h2>
+      <p>Security and engineering, run as one practice.</p>
+    </div>
+    <div class="focus">
+      <article class="card">
+        <h3>Application &amp; API security</h3>
+        <p>Hands-on testing of web applications, mobile applications and APIs using OWASP methodology, with fixes validated on retest rather than closed on a promise.</p>
+        <ul><li>OWASP testing</li><li>Authentication testing</li><li>API security</li><li>Remediation validation</li></ul>
+      </article>
+      <article class="card">
+        <h3>Penetration testing</h3>
+        <p>Vulnerability assessment across applications and infrastructure, working alongside engineering teams to find issues, prove them and close them for good.</p>
+        <ul><li>OWASP ZAP</li><li>Kali Linux</li><li>Vulnerability assessment</li><li>Infrastructure security</li></ul>
+      </article>
+      <article class="card">
+        <h3>Cloud &amp; infrastructure</h3>
+        <p>Securing the layer the product runs on — cloud infrastructure, the database tier and the traffic paths in front of it — so scale doesn't quietly open new exposure.</p>
+        <ul><li>Cloud security</li><li>Database security</li><li>Traffic distribution</li><li>Secure deployment</li></ul>
+      </article>
+      <article class="card">
+        <h3>Security operations</h3>
+        <p>Vulnerability management with real ownership and triage, plus the strategy and reporting that let a founder see where risk actually sits.</p>
+        <ul><li>Vulnerability management</li><li>Security operations</li><li>Security strategy</li><li>Risk reporting</li></ul>
+      </article>
+      <article class="card">
+        <h3>Platform engineering</h3>
+        <p>Responsive, dynamic web platforms end to end: frontend through to database, API integration, event handling and the deployment that keeps them reliable under load.</p>
+        <ul><li>FastAPI / Flask</li><li>Tailwind</li><li>API integration</li><li>Event handling</li></ul>
+      </article>
+      <article class="card">
+        <h3>AI &amp; automation</h3>
+        <p>AI/ML features built into product — fine-tuning, automation pipelines, and a voice-enabled chatbot shipped for QuantumX '26.</p>
+        <ul><li>Fine-tuning</li><li>Automation</li><li>Voice chatbots</li><li>Python</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="clause">03</span>
+      <h2>Experience</h2>
+      <p>Six roles across security, engineering and media.</p>
+    </div>
+    <ol class="tl">
+      <li class="row">
+        <div class="when"><b>Feb 2026</b>— Present <span class="now">●</span></div>
+        <div class="role">
+          <span class="chip sec">Security</span>
+          <h3>Chief Information Security Officer</h3>
+          <div class="org">Accesco</div>
+          <p>Building secure, scalable technology infrastructure for quick commerce. Leading cybersecurity strategy, application and API security, cloud security, vulnerability management and security operations — working at the intersection of technology, product and business to build security into the company's growth.</p>
+          <p>Contributed to building a seamless app and website: responsive, dynamic web pages on strong and secure databases, API integration, efficient event handling and traffic distribution. Working across AI/ML features, fine-tuning and automation with FastAPI and Flask, and with OWASP ZAP and Kali Linux to make the platforms unbreachable.</p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="when"><b>Nov 2025</b>— Mar 2026</div>
+        <div class="role">
+          <span class="chip eng">Tech &amp; Media</span>
+          <h3>Website, Graphics &amp; Tech Lead</h3>
+          <div class="org">QuantumX '26</div>
+          <p>Led the website and media team in building an efficient site that handles heavy traffic, with smooth navigation across pages and an AI-powered, voice-enabled chatbot. Also helped create the graphics, event branding and promotional content across platforms, working with different teams to translate ideas into vivid visuals and backdrops that drove audience engagement.</p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="when"><b>Nov 2025</b>— Jan 2026</div>
+        <div class="role">
+          <span class="chip sec">Security</span>
+          <h3>Cyber Security Lead</h3>
+          <div class="org">Accesco</div>
+          <p>Drove application security, infrastructure security, vulnerability management and security operations. Led security assessments across web, mobile, APIs, databases and cloud infrastructure, working closely with engineering teams to build secure and scalable technology.</p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="when"><b>Sep 2025</b>— Sep 2026</div>
+        <div class="role">
+          <span class="chip eng">Tech &amp; Media</span>
+          <h3>Board Member &amp; Tech Lead</h3>
+          <div class="org">TEDxNHCE</div>
+          <p>Managed the website and significantly built out its features and dynamic pages — end-to-end frontend and backend changes, seamless deployment, traffic distribution and reliability. Also shaped the visual storytelling: high-performance videos for TEDx socials, editing, post-production and content optimisation for talks and promotions, to TEDx global standards.</p>
+          <p>Practical ground-up experience in building a proper website, alongside event management and networking with TEDx speakers.</p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="when"><b>Aug 2025</b>— Nov 2025</div>
+        <div class="role">
+          <span class="chip sec">Security</span>
+          <h3>Penetration Tester</h3>
+          <div class="org">Accesco</div>
+          <p>Penetration testing engineer specialising in web application, mobile application and API security. Vulnerability assessment, authentication testing, infrastructure security and OWASP-based security testing — working closely with engineering teams to identify vulnerabilities, validate remediation and strengthen application security.</p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="when"><b>Dec 2024</b>— Feb 2025</div>
+        <div class="role">
+          <span class="chip eng">Engineering</span>
+          <h3>Web Developer</h3>
+          <div class="org">Plasmid</div>
+          <p>Web development intern. Developed and optimised responsive web interfaces using modern technologies, building user-centric designs and UI components in HTML, CSS and Tailwind, with attention to performance and cross-browser compatibility. Collaborated with the team to turn design concepts into functional, scalable web solutions.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="toolkit">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="clause">04</span>
+      <h2>Toolkit</h2>
+      <p>What the day actually runs on.</p>
+    </div>
+    <div class="kit">
+      <div>
+        <h3>Security</h3>
+        <ul><li>OWASP ZAP</li><li>Kali Linux</li><li>OWASP methodology</li><li>Vulnerability assessment</li><li>Authentication testing</li></ul>
+      </div>
+      <div>
+        <h3>Backend</h3>
+        <ul><li>FastAPI</li><li>Flask</li><li>Python</li><li>REST APIs</li><li>Databases</li></ul>
+      </div>
+      <div>
+        <h3>Frontend</h3>
+        <ul><li>HTML</li><li>CSS</li><li>Tailwind</li><li>Responsive UI</li><li>Cross-browser</li></ul>
+      </div>
+      <div>
+        <h3>Platform</h3>
+        <ul><li>Deployment</li><li>Traffic distribution</li><li>Event handling</li><li>API integration</li></ul>
+      </div>
+      <div>
+        <h3>AI / ML</h3>
+        <ul><li>Fine-tuning</li><li>Automation</li><li>Voice-enabled chatbots</li><li>AI feature integration</li></ul>
+      </div>
+      <div>
+        <h3>Media</h3>
+        <ul><li>Video production</li><li>Editing &amp; post</li><li>Event branding</li><li>Social creatives</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Let's talk<br>security</h2>
+        <p>Open to security engagements, platform work and conversations about building secure products at speed.</p>
+      </div>
+      <div class="cta" style="margin:0">
+        <a class="btn" href="https://www.linkedin.com/in/shakti-prasad-muduli/">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Shakti Prasad Muduli</span>
+    <span>Security · Platform · AI</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme-toggle');
+  function current(){
+    var set=root.getAttribute('data-theme');
+    if(set) return set;
+    return window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+  }
+  function label(){ btn.textContent = current()==='dark' ? 'Light' : 'Dark'; }
+  try{ var saved=localStorage.getItem('spm-theme'); if(saved) root.setAttribute('data-theme',saved); }catch(e){}
+  label();
+  btn.addEventListener('click',function(){
+    var next = current()==='dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem('spm-theme',next); }catch(e){}
+    label();
+  });
+})();
+</script>
+</body>
+</html>
